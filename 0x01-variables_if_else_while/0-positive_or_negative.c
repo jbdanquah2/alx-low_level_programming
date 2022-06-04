@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-/* more headers go here */
-
-/* better style doc for function main goes here */
+/**
+ * main- Entry point
+ * Return 0: Always
+ */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = (rand() - RAND_MAX) / 2 ;
+	n = (rand() - RAND_MAX) / 2;
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
