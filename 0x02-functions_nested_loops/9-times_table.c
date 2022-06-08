@@ -15,7 +15,7 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			int n = j * i;
-			
+
 			if (n % 10 == n)
 			{
 				printf(" %d", n);
