@@ -5,8 +5,6 @@
  * _islower - checks if a char is lower
  *
  * Return: 1 if true and 0 if false
- *
- * c : any character
  */
 int _islower(int c)
 {
