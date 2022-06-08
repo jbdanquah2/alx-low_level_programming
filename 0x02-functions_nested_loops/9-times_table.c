@@ -16,7 +16,7 @@ void times_table(void)
 		{
 			int n = j * i;
 
-			if (n % 10 == n && n != 0)
+			if (n % 10 == n)
 			{
 				printf(" %d", n);
 			}
@@ -33,13 +33,6 @@ void times_table(void)
 				printf(", ");
 			}
 		}
-		if (j == 10)
-		{
-			printf("\n");
-		}
-		else
-		{
-			printf("%d\n", i);
-		}
+		printf("\n");
 	}
 }
