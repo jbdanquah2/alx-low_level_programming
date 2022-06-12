@@ -15,27 +15,31 @@ int main(void)
 		{
 			if (i % 5 == 0)
 			{
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 			}
 			else
 			{
-				printf("Fizz ");
+				printf("Fizz");
 			}
 		}
 		else if (i % 5 == 0)
 		{
 			if (i % 3 == 0)
 			{
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 			}
 			else
 			{
-				printf("Buzz ");
+				printf("Buzz");
 			}
 		}
 		else
 		{
 			printf("%d ", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
 		}
 	}
 	printf("\n");
