@@ -11,12 +11,13 @@ void rev_string(char *s)
 {
 	int i;
 	int len;
-	char *temp = s;
+	char temp;
 
 	len = strlen(s);
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len / 2; i++)
 	{
-		temp[--len] = s[i];
+		temp = s[i];
+		s[i] = s[len - 1 - i];
+		s[len - 1 - i] = temp;
 	}
-	printf("%s - this is temp", temp);
 }
