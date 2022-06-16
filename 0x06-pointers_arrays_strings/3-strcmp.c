@@ -5,9 +5,8 @@
  * _strcmp - compare two strings
  * @s1: string one
  * @s2: string two
- * Return: int
+ * Return: 0 if equal, 15 if s1 is more or -15 if s1 is less
  */
-
 int _strcmp(char *s1, char *s2)
 {
 	int i;
