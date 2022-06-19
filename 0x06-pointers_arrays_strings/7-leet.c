@@ -12,15 +12,18 @@ char *leet(char *s)
 {
 	int i, j;
 	char *ptr = s;
-	int numbs[] = {4, 3, 0, 7, 1};
+	char numbs[] = {'4', '3', '0', '7', '1'};
 	char caps[] = {'A', 'E', 'O', 'T', 'L'};
 	char small[] = {'a', 'e', 'o', 't', 'l'};
 
 	for (i = 0; s[i]; i++)
 	{
-		if (s[i] == caps[i] || s[i] == small[i])
+		for (j = 0; j < 5; j++)
 		{
-			s[i] = numbs[i];
+			if (s[i] == caps[j] || s[i] == small[j])
+			{
+				s[i] = numbs[j];
+			}
 		}
 	}
 	return (ptr);
