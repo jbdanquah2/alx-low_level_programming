@@ -15,15 +15,11 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i]; i++)
 	{
-		ptr = s;
 		if (s[i] == c)
 		{
+			ptr = s;
 			ptr = ptr + i;
 			break;
-		}
-		else
-		{
-			ptr = NULL;
 		}
 	}
 	return (ptr);
