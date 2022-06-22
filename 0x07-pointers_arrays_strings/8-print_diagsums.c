@@ -15,7 +15,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < rows; i++)
 	{
-		for (j = 0; j < columns; j ++)
+		for (j = 0; j < columns; j++)
 		{
 			sum += *(a + (i * columns + i));
 			break;
@@ -28,7 +28,7 @@ void print_diagsums(int *a, int size)
 		for (y = columns - 1 - x; y >= 0; y--)
 		{
 			sum2 += *(a + (x * columns + y));
-			break;			
+			break;
 		}
 	}
 	printf("%d\n", sum2);
