@@ -10,14 +10,26 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, sum = 0;
+	int i, j, x, y, sum = 0, sum2 = 0;
+	int rows = size, columns = size;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < rows; i++)
 	{
-		for (j = 0; j < size; j++)
+		for (j = 0; j < columns; j ++)
 		{
-			sum = sum + a[i];
+			sum += *(a + (i * columns + i));
+			break;
 		}
 	}
-	printf("%d\n", sum);
+	printf("%d, ", sum);
+
+	for (x = 0; x < rows; x++)
+	{
+		for (y = columns - 1 - x; y >= 0; y--)
+		{
+			sum2 += *(a + (x * columns + y));
+			break;			
+		}
+	}
+	printf("%d\n", sum2);
 }
