@@ -2,7 +2,7 @@
 
 /**
  * _sqrt_recursion - finds the natural sqrt of a number
- * find_sqrt - find sqrt
+ * find_sqrt - checks
  * @n: number to find sqrt
  * @k: checker
  * Return: sqrt or -1
