@@ -8,10 +8,12 @@
  * Return: sqrt or -1
  */
 
-int find_sqrt(unsigned long k, unsigned long n)
+int find_sqrt(int k, int n)
 {
 	unsigned long next_k = (k + n / k) / 2;
 
+	if (n < 0)
+		return (-1);
 	if (k * k <= n && (k + 1) * (k + 1) > n)
 		return (k);
 	else
