@@ -14,13 +14,13 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		if (n % (n / 2 ) == 0)
+		if (n % (n / 2) == 0)
 		{
 			return (0);
 		}
 		else
 		{
-			return (is_prime_number(n));
+			return (is_prime_number(n / 2));
 		}
 	}
 }
