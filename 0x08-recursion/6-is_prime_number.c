@@ -20,7 +20,8 @@ int is_prime_number(int n)
 		}
 		else
 		{
-			return (1 + is_prime_number(n / 2));
+			is_prime_number(n / 2);
+			return (1);
 		}
 	}
 }
