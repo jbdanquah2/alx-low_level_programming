@@ -19,18 +19,21 @@ int main(int argc, char *argv[])
 
 	if (argc - 1 == 0)
 		printf("%d\n", 0);
-	while (argc > 1)
+	else
 	{
-		if (!isNumber(argv[i]))
+		while (argc > 1)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isNumber(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			sum += atoi(argv[i]);
+			i++;
+			argc--;
 		}
-		sum += atoi(argv[i]);
-		i++;
-		argc--;
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
 /**
