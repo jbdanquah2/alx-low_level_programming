@@ -5,11 +5,7 @@
  * @str: pointer to string to print
  * Return: void
  */
-void _puts(char *str)
+void _puts(char *str __attribute__((unused)))
 {
-	while (*str)
-	{
-		_putchar(*str++);
-	}
-	_putchar('\n');
+
 }

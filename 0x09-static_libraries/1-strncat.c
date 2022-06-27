@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strncat - concats two strings
@@ -8,16 +7,7 @@
  * @n: number of chars to be added
  * Return: char;
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest __attribute__((unused)), char *src, int n __attribute__((unused)))
 {
-	char *ptr = dest;
-	int len, i;
-
-	len = strlen(dest);
-	for (i = 0; i < n && src[i] != '\0'; i++)
-	{
-		dest[len + i] = src[i];
-	}
-	dest[len + i] = '\0';
-	return (ptr);
+	return (src);
 }

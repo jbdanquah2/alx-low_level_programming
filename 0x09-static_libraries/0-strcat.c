@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strcat - concats two strings
@@ -7,16 +6,7 @@
  * @src: source string
  * Return: a string
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest __attribute__((unused)), char *src)
 {
-	char *ptr = dest;
-	int i, len1, len2;
-
-	len1 = strlen(dest);
-	len2 = strlen(src);
-	for (i = 0; i <= len2; i++)
-	{
-		dest[len1 + i] = src[i];
-	}
-	return (ptr);
+	return (src);
 }
