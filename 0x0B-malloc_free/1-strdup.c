@@ -13,11 +13,9 @@ char *_strdup(char *str)
 {
 	char *newstr;
 	int i, j;
-	int len;
 
-	len = strlen(str);
 
-	if (str == NULL || len  == 0)
+	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
