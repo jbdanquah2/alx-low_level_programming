@@ -12,23 +12,20 @@
 char *_strdup(char *str)
 {
 	char *newstr;
-	int i, j;
-
+	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
-	{
 		;
-		newstr = (char *)malloc(sizeof(char) * (i + 1));
-	}
+		strout = (char *)malloc(sizeof(char) * (i + 1));
 
-	if (newstr == NULL)
+	if (strout == NULL)
 		return (NULL);
 
 	for (j = 0; j <= i; j++)
-		newstr[j] = str[j];
+		strout[j] = str[j];
 
-	return (newstr);
+	return (strout);
 }
