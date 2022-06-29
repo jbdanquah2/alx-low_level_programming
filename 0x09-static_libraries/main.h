@@ -1,4 +1,5 @@
-#include <unistd.h>
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
  * _putchar - writes the character c to stdout
@@ -27,3 +28,5 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+
+#endif
