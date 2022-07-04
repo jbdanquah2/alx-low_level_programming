@@ -2,11 +2,10 @@
 #define DOG_H
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * struct dog - creates a new struct
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of the dog
  */
 
 struct dog
