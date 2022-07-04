@@ -28,8 +28,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		n++;
 	}
 
-	_name = malloc(sizeof(char) * name_len);
-	_owner = malloc(sizeof(char) * owner_len);
+	_name = malloc(sizeof(char) * (name_len + 1));
+	_owner = malloc(sizeof(char) * (owner_len + 1));
 
 	for (j = 0; j < name_len; j++)
 		_name[j] = name[j];
