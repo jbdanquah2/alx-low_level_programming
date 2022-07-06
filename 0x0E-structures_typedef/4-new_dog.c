@@ -20,7 +20,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-
 	for (name_len = 0; name[name_len]; name_len++)
 		;
 	for (owner_len = 0; owner[owner_len]; owner_len++)
