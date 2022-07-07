@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 		int a, b;
+		char *op;
 		int (*operation)(int, int);
 
 		if (argc != 4)
@@ -19,9 +20,10 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
-		if (atoi(argv[2]) != '/' || atoi(argv[2]) != '+' || atoi(argv[2]) != '-' || atoi(argv[2]) != '*' || atoi(argv[2]) != '%')
+		op = argv[2];
+		if (op != '/' || op != '+' || op != '-' || op != '*' || op != '%')
 		{
-			printf("Error\n");
+			printf("this Error\n");
 			exit(99);
 		}
 		operation = get_op_func(argv[2]);
