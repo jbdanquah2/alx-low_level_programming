@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * binary_to_uint - converts binary string to decimal
@@ -9,20 +8,23 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dec = 0, i, len;
-	unsigned int x, j, n;
-
+	unsigned int dec = 0, len;
+	unsigned int x = 1, y, j, n;
+	int i;
 	if (b == NULL)
 		return (0);
 
 	for (len = 0; b[len] != '\0'; len++)
 		;
 
-	for (i = len, j = 0; b[i] != '\0'; j++, i--)
+	for (i = len - 1, j = 0; i >= 0; i--, j++)
 	{
 		n = b[j];
-		x = pow(2, j);
-		dec += x * n;
+		for (y = 0; y <= j; y++)
+		{
+			x  *= 2;
+		}
+		dec += (x * n);
 	}
 	return (dec);
 }
