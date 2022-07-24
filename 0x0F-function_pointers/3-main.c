@@ -1,5 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
 
 /**
  * main - check the code for Holberton School students.
@@ -12,7 +11,6 @@
 int main(int argc, char *argv[])
 {
 		int a, b;
-		char *op;
 		int (*operation)(int, int);
 
 		if (argc != 4)
@@ -20,10 +18,9 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
-		op = argv[2];
-		if (op != '/' || op != '+' || op != '-' || op != '*' || op != '%')
+		if (argv[2][1])
 		{
-			printf("this Error\n");
+			printf("Error\n");
 			exit(99);
 		}
 		operation = get_op_func(argv[2]);
