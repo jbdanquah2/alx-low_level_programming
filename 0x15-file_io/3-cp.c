@@ -59,21 +59,25 @@ void _copy(char **av)
 			exit(99);
 		}
 	}
-	_close(fd_from);
 	_close(fd_to);
+	_close(fd_from);
 }
 
 /**
  * _close - closes a file descriptor
  * @fd: file descriptor
  *
- * Return: nothing
+ * Return: int
  */
-void _close(int fd)
+int _close(int fd)
 {
-	if (close(fd) == -1)
+	int ret;
+
+	ret = close(fd);
+	if (ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
 		exit(100);
 	}
+	return (ret);
 }
