@@ -14,8 +14,8 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
-	_copy(&*argv);
+	else
+		_copy(&*argv);
 
 	return (0);
 }
@@ -69,15 +69,14 @@ void _copy(char **av)
  *
  * Return: int
  */
-int _close(int fd)
+void _close(int fd)
 {
 	int ret;
 
 	ret = close(fd);
 	if (ret == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (ret);
 }
