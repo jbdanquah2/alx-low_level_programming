@@ -3,13 +3,17 @@
 /**
  * hash_table_delete - function that delete a hash table
  * @ht: type pointer of the hash_tabe
+ *
+ * Return: nothing
  */
 
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i;
-	hash_table_t *head = ht;
+	hash_table_t *head;;
 	hash_node_t *node, *temp;
+
+	head = ht;
 
 	for (i = 0; i < ht->size; i++)
 	{
