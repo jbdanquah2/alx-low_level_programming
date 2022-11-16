@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""island_perimeter module
+"""
 
 
 def island_perimeter(grid):
-
+    """island_perimeter function"""
+    
     wd = len(grid[0])
     ht = len(grid)
     per = 0
